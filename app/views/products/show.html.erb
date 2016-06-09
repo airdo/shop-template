@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+<div class="show text-center">
+    <p class="show__title"><%=@product.title%></p>
+    <img class="show__image" src=<%= @product.image_url %>></img>
+    <p class="show__description"><%= @product.description %></p>
+    <div class="clearfix">
+        <p class="show__price"><%=@product.price %> руб.</p> <a class="show__add-to-cart" href=#>Add to cart</a>
+    </div>
+</div>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

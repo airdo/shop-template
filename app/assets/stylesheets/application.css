@@ -1,0 +1,253 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #000;
+    z-index: -1;
+}
+
+nav {
+    padding: 1em 0;
+}
+
+nav ul {
+    font-size: 1.1em;
+    margin-left: -15px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+nav ul li:last-child {
+    position: absolute;
+    right: 10px;
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:visited{
+    color: #fff;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-left:100px;
+    width: calc(100% - 200px);
+}
+
+@media screen and (max-width: 1200px) {
+    section {
+        margin-left: 0;
+        width:100%;
+    }
+}
+
+figure {
+    margin: 0;
+}
+
+.clearfix:after{
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.products {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-conntent: center;
+}
+
+.item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    
+    min-width: 20vw;
+    max-width: 20vw;
+    
+    border: 1px solid #ECEFF1;
+    background-color: #FAFAFA;
+    margin: 10px;
+    
+    transition: .2s linear;
+}
+
+@media screen and (max-width: 800px) {
+    .item {
+        min-width: 45vw;
+        max-width: 49vw
+    }
+}
+
+@media screen and (max-width:610px) {
+    .item {
+        min-width: 70vw;
+    }
+}
+
+.product__link {
+ text-decoration: none;   
+}
+
+.product__link:hover, .product__link:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.item:hover {
+    box-shadow:  0 0 10px 0 #CFD8DC;
+    margin: 10px;
+    -webkit-transform: scale(2,2);
+    -ms-transform: scale(2,2); 
+    transform: scale(1.05);
+}
+
+.item__title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.item__image {
+    width: 100%;
+}
+
+.item__description {
+    text-align: center;
+    padding: 10px;
+}
+
+.item__price {
+    text-align: right;
+    font-weight: 600;
+}
+
+.item__price {
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.item__btn-to-cart, .show__add-to-cart {
+    margin-right: 10px;
+    float: right;
+    text-transform: lowercase;
+    background-color: #CFD8DC;
+    padding: 5px;
+    border: 1px solid #9E9E9E;
+    text-decoration: none;
+}
+
+.show__title {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase; 
+    text-decoration: none;
+}
+
+.show__description {
+    font-size: 15px;
+    word-spacing: 10px;
+}
+
+.show__price {
+    font-size: 20px;
+}
+
+.show__add-to-cart {
+    float: none;
+    margin: 0;
+}
+
+.jumbotron {
+    width: 100%;
+    height: 50vw;
+    max-height:600px;
+    
+    overflow: hidden;
+    background: url('http://66.media.tumblr.com/tumblr_me173cvcHZ1r9rnkno4_1280.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+}
+
+.jumbotron img {
+    width: 100%;
+}
+
+.jumbotron__div {
+    position: fixed;
+    top: 15vh;
+    right: 15vw;
+    text-align: right;
+    width: 400px;
+}
+
+.jumbotron__text {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.2em;
+    background-color: grey;
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    top: 10vw;
+    left: 10vw;
+    width: 80vw;
+    height: 400px;
+    background-color: grey;
+}
+
+*= require remodal.css
+*= require remodal-defaulr-theme.css

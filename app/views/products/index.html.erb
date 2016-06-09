@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron">
+  <!--<img src='http://66.media.tumblr.com/tumblr_me173cvcHZ1r9rnkno4_1280.jpg' alt-"Promo wallet">-->
+  <div class="jumbotron__div">
+    <p class="jumbotron__text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, excepturi, cupiditate, delectus doloribus maiores dicta eligendi rem beatae dolore labore repellat et sequi incidunt harum ad eveniet laboriosam saepe tenetur.
+    </p>
+    <a class="jumbotron__btn-call-to-action" href="#">Купить</a>
+  </div>
+  </img>
+</div>
+
+<div class="products">
+  <% @products.each do |product| %>
+  <a class="product__link" href=<%=product_path(product.id) %>>
+  <div class="item">
+    <p class="item__title"><%= product.title %></p>
+    <figure>
+      <img class= "item__image" src="<%=product.image_url%>" alt='Wallet Image'></img>
+      <figcaption class="item__description"> <%= product.description %></figcaption>
+    </figure>
+    <p class="clearfix">
+      <span class="item__price"><%=product.price%> руб. </span> 
+      <a class="item__btn-to-cart" href="#">Add to cart</a>
+    </p>
+    
+    <p class="text-center">
+      <%= link_to 'Show', product %>
+      <%= link_to 'Edit', edit_product_path(product) %>
+      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+  </div>
+  </a>
+  <% end %>
+  
+</div>
+    
+      
+      
+      
+      
+    
+
+<%= link_to 'New Product', new_product_path %>
