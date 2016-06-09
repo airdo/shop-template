@@ -225,7 +225,7 @@ figure {
 }
 
 .jumbotron__div {
-    position: fixed;
+    position: absolute;
     top: 15vh;
     right: 15vw;
     text-align: right;
@@ -233,12 +233,38 @@ figure {
 }
 
 .jumbotron__text {
-    font-size: 25px;
+    display: block;
+    font-size: 17px;
     font-weight: 500;
     line-height: 1.2em;
-    background-color: grey;
+    padding: 10px;
+    margin: 10px;
+    background: rgba(236,239,241 ,.5);
+    
 }
 
+.jumbotron__btn-call-to-action {
+    display: inline-block;
+    
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px;
+    margin: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #FFF176;
+    transition: .7s linear;
+}
+
+.jumbotron__btn-call-to-action:hover {
+    background-color: #FFCA28;
+}
+
+@media screen and (max-width: 800px) {
+    .jumbotron__text {
+        display: none;
+    }
+}
 .modal {
     position: fixed;
     display: none;
