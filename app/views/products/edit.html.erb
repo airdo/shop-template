@@ -1,6 +1,11 @@
-<h1>Editing Product</h1>
+<div class="form-wraper">
+    <div class="form">
+        <h1>Editing Product</h1>
+        <%= render 'form' %>        
+        <%= link_to 'Show', @product %> |
+        <%= link_to 'Back', products_path %>
+    </div>
+</div>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+

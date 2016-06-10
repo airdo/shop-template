@@ -265,6 +265,57 @@ figure {
         display: none;
     }
 }
+
+.form-wraper {
+    display: table;
+    width: 100%;
+}
+
+.form {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.form__field {
+    line-height: 2em;
+    padding: 10px;
+}
+
+.form__field input, .form__field textarea {
+    line-height: 2em;
+    padding: 10px;
+    text-align: center;
+    width: 30vw;
+}
+
+.form__field label {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+
+@media screen and (max-width:1024px) {
+    .form__field input, .form__field textarea {
+        width: 70vw;
+    }
+}
+
+.actions input {
+    width: calc(30vw + 22px);
+    height: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #E6EE9C;
+    transition: .7s linear;
+}
+
+.actions:hover input {
+    background-color: #CDDC39;
+}
+
+
 .modal {
     position: fixed;
     display: none;
